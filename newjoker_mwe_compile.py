@@ -31,8 +31,8 @@ rnd = np.random.RandomState(seed=42)
 
 TWOFACE_CACHE_PATH = os.getenv("TWOFACE_CACHE_PATH")
 cluster = "Ruprecht"
-month = "Jan21"
-data_dir = os.path.expanduser("/observing/TRES/Ruprecht/")
+month = "Feb20"
+data_dir = os.path.expanduser("~/observing/TRES/Ruprecht/")
 treslist = at.read(os.path.join(data_dir,"ruprecht_targets.csv"),delimiter=",")
 
 
