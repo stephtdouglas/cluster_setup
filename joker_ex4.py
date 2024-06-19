@@ -43,7 +43,7 @@ joker_samples = joker.rejection_sample(data, prior_samples, max_posterior_sample
 with prior.model:
     mcmc_init = joker.setup_mcmc(data, joker_samples)
 
-    trace = pm.sample(tune=500, draws=500, start=mcmc_init, cores=1, chains=2)
+    trace = pm.sample(tune=500, draws=500, start=mcmc_init, cores=1, chains=4)
 
 az.summary(trace, var_names=prior.par_names)
 

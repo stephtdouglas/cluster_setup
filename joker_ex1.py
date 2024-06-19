@@ -38,6 +38,7 @@ prior = tj.JokerPrior.default(
 )
 
 prior_samples = prior.sample(size=250_000, rng=rnd)
+prior_samples.write("prior_samples.hdf5",overwrite=True)
 
 joker = tj.TheJoker(prior, rng=rnd)
 joker_samples = joker.rejection_sample(data, prior_samples, max_posterior_samples=256)
